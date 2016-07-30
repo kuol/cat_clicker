@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Cat Clicker</title>
+    <!--
+    <script src="clicker.js"></script>
+    -->
+</head>
+<body>
+    <img id="cat" src="black_cat.jpg" alt="black cat">
+    <p id="nClicks">Number of Clicks: 0</p>
+    <script>
+        var elem = document.getElementById('cat');
+        elem.nClicks = 0;
+        function addClicks(e) {
+            e.target.nClicks++;
+            document.getElementById("nClicks").innerHTML = "Number of Clicks: " + 
+                e.target.nClicks;
+        }
+        elem.addEventListener('click', addClicks, false);
+    </script>
+</body>
+</html>
